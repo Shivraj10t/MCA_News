@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+@using System.Data;
+@{
+    <div class=" H_Title">
+        <h2>Index</h2>
+
+
+
+        <a class="btn1" onclick="{ LinkButton() }">ADD NEW </a>
+
+    </div>
+    if (Model != null)
+    {
+
+
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>ReportType</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+            <tbody id="tbody">
+                @foreach (DataRow item in Model.Tables[0].Rows)
+                {
+
+                    <tr>
+                        <td>@item["SpecialReportId"].ToString()</td>
+
+                        <td>@item["ReportType"].ToString()</td>
+                        <td class="d-I-Flex">
+                            <div class="edit" onclick="edit_data(this)" id="edit_@item["SpecialReportId"].ToString()">
+                                <span class="fa fa fa-edit"></span>EDIT
+                            </div> <div class="delete" onclick="delete_data(this)" id="delete_@item["SpecialReportId"].ToString()">DELETE</div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    <input type="hidden" data-href="AddReportType" id="link" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/Content/js/ReportType/report_type.js"></script>
+<script>
+
+    const edit_data = (obj) => {
+
+        let id = obj.getAttribute('id');
+        id = id.split('_')[1];
+
+        $.ajax({
+            type: 'GET',
+            url: "Edit", cache: false,
+            data: { id: id },
+            success: (a) => {
+               
+            }
+            , error:  function(jqXHR, exception) {
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else {
+                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                }
+                console.log(msg)
+            },
+        })
+
+    }
+</script>
+}
+@*<script src="~/Content/js/Taluka/taluka.js"></script>*@

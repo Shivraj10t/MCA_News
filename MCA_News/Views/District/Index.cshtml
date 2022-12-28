@@ -1,0 +1,52 @@
+﻿
+    @using System.Data.SqlClient;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+  
+ 
+    <div class=" H_Title">
+        <h2>Index</h2>
+ 
+     
+ 
+ <a class="btn1" onclick="{ LinkButton() }">ADD NEW </a>
+    
+</div>
+ 
+
+    
+    <table>
+    <thead>
+
+        <tr> <th>ID</th>  <th>Distict</th> <th>Action</th> 
+        </tr>
+            
+    </thead>
+        <tbody id="tbody">
+           
+      
+        </tbody>
+    </table>
+   
+<input type="hidden" data-href="AddDistrict" id="link"/>
+<script src="~/Content/js/District/District.js"></script>
+
+ <script type="text/javascript">
+    //function delete_data(obj) {
+    //    debugger;
+    //    let id = obj.getAttribute('id');
+    //    id = id.split('_');
+    //    $.post('Delete', { Id: id[1] }, function (data) {
+    //        alert(data);
+    //    });
+        
+    //    LoadPage();
+    //}
+   
+   
+</script>
+        @*//let a = (e).querySelectorAll(':scope>span');
+        //a = a[0].getAttribute('data-count')
+        //console.log(window.location.href)*@

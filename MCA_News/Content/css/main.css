@@ -1,0 +1,246 @@
+﻿body {
+}
+
+.H_Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 10px 2px;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+/*.container-main{
+     display:flex;
+     justify-content:center;
+}*/
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.w70 {
+    width: 70%;
+    margin: 0px 80px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.sidenav {
+    height: 100%;
+    /*width: 160px;*/
+    width: inherit;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.btn1 {
+    background-color: blue;
+    color: white;
+    position: relative;
+    font-weight: 800;
+    width: fit-content;
+    padding: 10px 22px 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+    .btn1:hover {
+        background-color: #271970;
+    }
+
+.batch:before {
+    content: attr(data-count);
+    background-color: black;
+    position: absolute;
+    top: -10px;
+    right: -6px;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+}
+
+/*TABLE*/
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    tables td, table th {
+        border: 1px solid #ddd;
+        padding: 6px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #ddd;
+    }
+
+    table th {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+/*=========================*/
+
+.edit {
+    content: '&#xe16c';
+    background-color: green;
+    font-size: 10px;
+    padding: 10px;
+    color: wheat;
+    margin: 0px 15px 0px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    .edit:hover {
+        background-color: black;
+    }
+
+.delete {
+    background-color: red;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: wheat;
+    margin: 0px 15px 0px 15px;
+    border-radius: 3px;
+}
+
+    .delete:hover {
+        background-color: black;
+    }
+
+.d-I-Flex {
+    display: inline-flex
+}
+
+.notifi {
+    background-color: antiquewhite;
+    width: 30%;
+    height: 75px;
+    padding: 10px;
+    right: 0;
+    position: absolute;
+    animation: 3s linear 1s infinite running slidein;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.left {
+    justify-content: flex-end;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*-------------------------------------*/

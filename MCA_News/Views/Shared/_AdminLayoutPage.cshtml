@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-25">
+            <div class="sidenav">
+                <a href="@Url.Action("/Index", "District")">District</a>
+                <a href="@Url.Action("/Index", "Taluka")">Taluka</a>
+                <a href="@Url.Action("/Index", "SpecialReport")">Special Report</a>
+                <a href="@Url.Action("/Index", "Editor")">Editor</a>
+                <a href="@Url.Action("/Index", "News")">News</a>
+                
+            </div>
+        </div>
+        <div class="col-75">
+            <div class="container-main">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/Scripts/jquery-3.6.1.js"></script>
+    <script src="~/Scripts/jquery-3.6.1.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "AddDistrict";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+ 
+
+
+<div class=" H_Title">
+    <h2>Add District  @ViewBag.DistictId</h2>
+    <a class="btn1" onclick="{ LinkButton() }"><span data-count="" id="batch" class="batch"></span>LIST </a>
+
+</div>
+ 
+         
+            <div class="container w70">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="DistrictId">Id</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="DistrictId" name="DistrictId" disabled placeholder="Id">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="District">District</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="District" name="District" placeholder="District..">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <input type="submit" value="Submit" onclick="add()">
+                </div>
+            </div>
+
+
+    <input type="hidden" data-href="index" id="link" />
+
+  
+<script src="~/Content/js/District/District.js"></script>
+ 
+

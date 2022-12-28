@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "AddTaluka";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+
+
+
+<div class=" H_Title">
+    <h2>Add Taluka  @ViewBag.DistictId</h2>
+    <a class="btn1" onclick="{ LinkButton() }"><span data-count="" id="batch" class="batch"></span>LIST </a>
+
+</div>
+
+
+<div class="container w70">
+    <div class="row hidden">
+        <div class="col-25">
+            <label for="TalukaId">Id</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="TalukaId" name="TalukaId" disabled placeholder="Id">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="District">District</label>
+        </div>
+        <div class="col-75 ">
+            <select id="District" class="">
+                <option value="value">Select District</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="Taluka">Taluka</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="Taluka" name="Taluka" placeholder="Taluka..">
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit" onclick="add()">
+    </div>
+</div>
+
+
+<input type="hidden" data-href="index" id="link" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="~/Content/js/Taluka/taluka.js"></script>

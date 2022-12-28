@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@using System.Data;
+@{
+    <div class=" H_Title">
+        <h2>Index</h2>
+
+
+
+        <a class="btn1" onclick="{ LinkButton() }">ADD NEW </a>
+
+    </div>
+    if (Model != null)
+    {
+
+
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Distict</th>
+                    <th>Takuka</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+            <tbody id="tbody">
+                @foreach (DataRow item in Model.Tables[0].Rows)
+                {
+
+                    <tr>
+                        <td>@item["TalukaId"].ToString()</td>
+                        <td>@item["District"].ToString()</td>
+                        <td>@item["Taluka"].ToString()</td>
+                        <td class="d-I-Flex">
+                            <div class="edit" onclick="edit(this)" id="edit_@item["TalukaId"].ToString()">
+                                <span class="fa fa fa-edit"></span>EDIT
+                            </div> <div class="delete" onclick="delete_data(this)" id="delete_@item["TalukaId"].ToString()">DELETE</div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    <input type="hidden" data-href="AddTaluka" id="link" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+    <script src="~/Content/js/Taluka/taluka.js"></script>
